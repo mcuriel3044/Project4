@@ -1,0 +1,87 @@
+body{
+    background-color: cornsilk;
+}
+*{box-sizing:border-box;}
+
+img{width: 100%;}
+
+.maincontainer{
+    width: 800px;
+    padding: 20px;
+    box-shadow: 1px 1px 3px gray;
+    margin: 30px auto;
+}
+.albumcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card{
+    width: 40%;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+}
+.card-title{
+    text-align: center;
+    font-weight: bolder;
+    color: blue;
+}
+.card-img-container{
+    border: solid gray 1p;
+}
+.rate_btn{
+    display: block;
+    color: white;
+    background-color: blue;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    border-radius: 10px;
+}
+.rate_btn:hover{
+    background-color: cadetblue;
+    font-weight: bolder;
+}
+.review_title {
+    text-align: center;
+    font-weight: bolder;
+    color: cadetblue;
+}
+.body-title{
+    font-weight: bolder;
+    color: cadetblue;
+}
+
+/*----POST.HTML*/
+.post-title{
+    text-align: center;
+    font-weight: bolder;
+    color: blue;
+}
+.form_post{
+    width: 500px;
+    padding: 20px;
+    box-shadow: 1px 1px 3px gray;
+    margin: 30px auto;
+    box-shadow: 2px 2px 4px gray;
+    border-radius: 20px;
+}
+.submit_btn{
+    display: block;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    border-radius: 10px;
+}
+.submit_btn:hover {
+    background-color: cadetblue;
+    font-weight: bolder;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RateMyCafe</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+
+    <h1  class="body-title">BookWorm Cafe</h1>
+
+    <main class="maincontainer">
+        <section>
+            <nav>
+                <a class="rate_btn" href="{% url 'add_post' %}">Tell Us How We Are Doing!</a>
+            </nav>
+        </section>
+
+        <section class="albumcontainer">
+            <div class="card">
+                <p class="card-title">How was our Service?</p>
+                <div class="card-img-container">
+                        <img class="card-img" src="/media/images/service.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="albumcontainer">
+            <div class="card">
+                <p class="card-title">How was our Staff?</p>
+                <div class="card-img-container">
+                        <img class="card-img" src="/media/images/staff.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="albumcontainer">
+            <div class="card">
+                <p class="card-title">How was your Coffee/Food?</p>
+                <div class="card-img-container">
+                        <img class="card-img" src="/media/images/coffee.jpg" alt="">
+                </div>
+            </div>
+        </section>
+            <H1 class="review_title">CUSTOMER REVIEWS:</H1>
+
+        <section class="albumcontainer">
+            {% for post in object_list %}
+            <div class="card">
+            <p class="card-title">{{post.title}}</p>
+            <div class="card-img-container">
+                <img class="card-img" src="{{post.image.url}}" alt="image of {{post.title}}">
+            </div>
+
+            </div>
+
+            {% endfor%}
+        </section>
+
+
+
+    </main>
+    
+</body>
+</html>
